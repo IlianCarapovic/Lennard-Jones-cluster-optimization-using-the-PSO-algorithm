@@ -124,7 +124,7 @@ using System.Globalization;
             Console.WriteLine();
             Console.WriteLine($"Number of evaluations: {LJCluster.numEvaluations}");
             Console.WriteLine($"Minimum energy: {gbestValue.ToString("F6", CultureInfo.InvariantCulture)}");
-            Console.WriteLine("OOptimal arrangement of atoms:");
+            Console.WriteLine("Optimal arrangement of atoms:");
 
             for (int i = 0; i < N; i++)
             {

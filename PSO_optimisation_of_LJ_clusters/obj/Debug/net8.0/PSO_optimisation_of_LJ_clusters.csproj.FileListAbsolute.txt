@@ -12,3 +12,4 @@
 /Users/iliancarapovic/Developer/Rider projects/PSO_optimisation_of_LJ_clusters/PSO_optimisation_of_LJ_clusters/obj/Debug/net8.0/PSO_optimisation_of_LJ_clusters.pdb
 /Users/iliancarapovic/Developer/Rider projects/PSO_optimisation_of_LJ_clusters/PSO_optimisation_of_LJ_clusters/obj/Debug/net8.0/PSO_optimisation_of_LJ_clusters.genruntimeconfig.cache
 /Users/iliancarapovic/Developer/Rider projects/PSO_optimisation_of_LJ_clusters/PSO_optimisation_of_LJ_clusters/obj/Debug/net8.0/ref/PSO_optimisation_of_LJ_clusters.dll
+/Users/iliancarapovic/Developer/Rider projects/PSO_optimisation_of_LJ_clusters/PSO_optimisation_of_LJ_clusters/obj/Debug/net8.0/PSO_optimisation_of_LJ_clusters.sourcelink.json

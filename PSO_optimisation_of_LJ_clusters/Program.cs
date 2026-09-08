@@ -4,10 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        int N = 45;
-        int swarmSize = 40;
+        int N = 7;
+        int M = 40;
 
-        PSO pso = new PSO(swarmSize, N);
+        PSO pso = new PSO(M, N);
 
         pso.RunStarTopology();
     }
