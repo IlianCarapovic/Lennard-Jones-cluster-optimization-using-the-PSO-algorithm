@@ -4,11 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        int N = 7;
+        int N = 38;
         int M = 40;
 
-        PSO pso = new PSO(M, N);
 
-        pso.RunStarTopology();
+        for (int i = 0; i < 30; i++)
+        {
+            LJCluster.numEvaluations = 0;
+            PSO pso = new PSO(M, N);
+            pso.RunRingTopology();
+        }
+        
     }
 }

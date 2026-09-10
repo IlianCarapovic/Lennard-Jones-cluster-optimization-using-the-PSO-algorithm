@@ -62,7 +62,9 @@ using System.Globalization;
         public void RunStarTopology()
         {
             Console.WriteLine("=== PSO — Star topology ===");
-
+            var log = new List<double>();
+            int sampleStep = 2000;
+            int nextSample = sampleStep;
             while (LJCluster.numEvaluations < LJCluster.MAX_EVALUATIONS)
             {
                 foreach (Particle p in particles)
@@ -73,6 +75,11 @@ using System.Globalization;
                 }
 
                 UpdateGBest();
+                if (LJCluster.numEvaluations >= nextSample)
+                {
+                    log.Add(gbestValue);
+                    nextSample += sampleStep;
+                }
 
                 foreach (Particle p in particles)
                 {
@@ -80,14 +87,17 @@ using System.Globalization;
                     p.UpdatePosition();
                 }
             }
-
+            string redak = string.Join(";", log.Select(v => v.ToString("F6", CultureInfo.InvariantCulture)));
+            File.AppendAllText($"LJ{N}_star.csv", redak + "\n");
             PrintResults();
         }
 
         public void RunRingTopology()
         {
             Console.WriteLine("=== PSO — Ring topology ===");
-
+            var log = new List<double>();
+            int sampleStep = 2000;
+            int nextSample = sampleStep;
             double[][] lbest      = new double[swarmSize][];
             double[]   lbestValue = new double[swarmSize];
 
@@ -114,8 +124,14 @@ using System.Globalization;
                 }
 
                 UpdateGBest();
+                if (LJCluster.numEvaluations >= nextSample)
+                {
+                    log.Add(gbestValue);
+                    nextSample += sampleStep;
+                }
             }
-
+            string redak = string.Join(";", log.Select(v => v.ToString("F6", CultureInfo.InvariantCulture)));
+            File.AppendAllText($"LJ{N}_ring.csv", redak + "\n");
             PrintResults();
         }
 

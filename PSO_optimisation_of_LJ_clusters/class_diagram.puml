@@ -1,0 +1,43 @@
+@startuml
+skinparam classAttributeIconSize 0
+top to bottom direction
+
+class Program {
+  + Main(args) : void
+}
+class PSO {
+  - particles : Particle[]
+  - gbestPos : double[]
+  - gbestValue : double
+  - swarmSize : int
+  - N : int
+  + RunStarTopology() : void
+  + RunRingTopology() : void
+  - UpdateGBest() : void
+  - UpdateLBest(...) : void
+  - PrintResults() : void
+}
+class Particle {
+  + positions : double[]
+  + velocity : double[]
+  + pbestPos : double[]
+  + pbestValue : double
+  + UpdatePBest(energy) : void
+  + CalculateVelocity(guidePos) : void
+  + UpdatePosition() : void
+}
+class LJCluster <<static>> {
+  + numEvaluations : int
+  + MAX_EVALUATIONS : int
+  + CalculateEnergy(positions, N) : double
+  + LJEnergy(r) : double
+}
+class AtomHelper <<static>> {
+  + Distance(positions, i, j) : double
+}
+
+Program --> PSO : stvara i pokreće
+PSO "1" *-- "M" Particle : sadrži
+PSO -right-> LJCluster : vrednuje
+LJCluster -down-> AtomHelper : udaljenost
+@enduml
