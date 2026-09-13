@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int N = 38;
+        int N = 57;
         int M = 40;
 
 

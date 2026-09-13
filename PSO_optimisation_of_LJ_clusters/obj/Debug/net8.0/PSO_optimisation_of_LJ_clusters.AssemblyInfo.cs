@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PSO_optimisation_of_LJ_clusters")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8801e000761984f1895ae3f51a773f08faff7e19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5770f93e2ec36596546417992a85e0a20dd40aaf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PSO_optimisation_of_LJ_clusters")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PSO_optimisation_of_LJ_clusters")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
